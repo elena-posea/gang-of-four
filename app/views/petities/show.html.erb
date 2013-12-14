@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titlu:</strong>
+  <%= @petity.titlu %>
+</p>
+
+<p>
+  <strong>Continut:</strong>
+  <%= @petity.continut %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @petity.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_petity_path(@petity) %> |
+<%= link_to 'Back', petities_path %>
