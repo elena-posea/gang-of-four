@@ -1,0 +1,34 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :varsta %><br />
+  <%= f.text_field :varsta, :autofocus => true %></div>
+
+
+  <div><%= f.label :username %><br />
+  <%= f.text_field :username %></div>
+
+  <%= radio_button_tag(:sex, "F") %>
+  <%= label_tag(:sex_f, "F") %>
+
+  <%= radio_button_tag(:sex, "M") %>
+  <%= label_tag(:sex_f, "M") %>
+
+  <div><%= f.label :tara %><br />
+  <%= f.country_select :tara, ["Romania"] %></div>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
