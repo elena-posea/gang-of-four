@@ -10,8 +10,14 @@
   <div><%= f.label :username %><br />
   <%= f.text_field :username %></div>
 
+  <%= radio_button_tag(:sex, "F") %>
+  <%= label_tag(:sex_f, "F") %>
+
+  <%= radio_button_tag(:sex, "M") %>
+  <%= label_tag(:sex_f, "M") %>
+
   <div><%= f.label :tara %><br />
-  <%= f.text_field :tara %></div>
+  <%= f.country_select :tara, ["Romania"] %></div>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>

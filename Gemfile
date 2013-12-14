@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # adaug gem pt devise
 gem 'devise'
 
+# pentru drop-down-ul de tari
+gem 'country_select'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
