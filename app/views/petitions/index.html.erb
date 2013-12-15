@@ -1,0 +1,31 @@
+<h1>Listing petitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titlu</th>
+      <th>Continut</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @petitions.each do |petition| %>
+      <tr>
+        <td><%= petition.titlu %></td>
+        <td><%= petition.continut %></td>
+        <td><%= petition.user_id %></td>
+        <td><%= link_to 'Show', petition %></td>
+        <td><%= link_to 'Edit', edit_petition_path(petition) %></td>
+        <td><%= link_to 'Destroy', petition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Start your own petition!', new_petition_path %>

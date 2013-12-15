@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titlu:</strong>
+  <%= @petition.titlu %>
+</p>
+
+<p>
+  <strong>Continut:</strong>
+  <%= @petition.continut %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @petition.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_petition_path(@petition) %> |
+<%= link_to 'Back', petitions_path %>
