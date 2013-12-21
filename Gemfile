@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # adaug gem pt devise
 gem 'devise'
 
+# gem pentru tagare
+gem 'acts-as-taggable-on'
+
 # pentru drop-down-ul de tari
 gem 'country_select'
 
