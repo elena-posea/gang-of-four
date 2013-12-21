@@ -5,6 +5,9 @@ gem 'rails', '4.0.0'
 
 # adaug gem pt devise
 gem 'devise'
+# adaug si gem-urile pentru integrarea fb
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # gem pentru tagare
 gem 'acts-as-taggable-on'
