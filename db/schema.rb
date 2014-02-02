@@ -13,6 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20131215011856) do
 
+  create_table "petities", force: true do |t|
+    t.string   "titlu"
+    t.string   "continut"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "petitions", force: true do |t|
     t.string "titlu"
     t.string "continut"
