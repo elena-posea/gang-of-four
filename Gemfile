@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
-# Bootstrap-sass for stylesheets
-gem 'bootstrap-sass'
 # adaug gem pt devise
 gem 'devise'
 
+
+# Bootstrap-sass for stylesheets
+gem 'bootstrap-sass'
 # gem pentru tagare
 gem 'acts-as-taggable-on'
 

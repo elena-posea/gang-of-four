@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
 
     <title>Theme Template for Bootstrap</title>
- 
+
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -17,10 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/theme/theme.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
-    
-  	<%= stylesheet_link_tag "custom" => true %> 
-  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-   	<%= csrf_meta_tags %>
+</head>
 <body>
 
 
@@ -31,11 +28,11 @@
 
 </div>
 <%= render "shared/footer" %>
-
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 <script src="http://getbootstrap.com/docs-assets/js/holder.js"></script>
 
+<%= javascript_include_tag :defaults %> 
 
 </body>
 </html>
