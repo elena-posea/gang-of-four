@@ -5,6 +5,17 @@ gem 'rails', '4.0.0'
 
 # Bootstrap-sass for stylesheets
 gem 'bootstrap-sass'
+# adaug gem pt devise
+gem 'devise'
+
+# gem pentru tagare
+gem 'acts-as-taggable-on'
+
+# pentru drop-down-ul de tari
+gem 'country_select'
+
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

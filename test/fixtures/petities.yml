@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titlu: MyString
+  continut: MyString
+  user_id: 1
+
+two:
+  titlu: MyString
+  continut: MyString
+  user_id: 1
