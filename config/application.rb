@@ -21,7 +21,9 @@ module GangOfFour
     # config.i18n.default_locale = :de
    
     #ActsAsTaggableOn.delimiter = ' ' # use space as delimiter
-    #ActsAsTaggableOn.remove_unused_tags = true
-    #ActsAsTaggableOn.force_lowercase = true  
+    ActsAsTaggableOn.remove_unused_tags = true
+    ActsAsTaggableOn.force_lowercase = true  
+
+    config.active_record.whitelist_attributes = false
 end
 end
