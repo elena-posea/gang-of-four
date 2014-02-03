@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:account_update) << :username << :tara << :varsta << :sex
     devise_parameter_sanitizer.for(:sign_up) << :username << :tara << :varsta << :sex
-    
   end
 
 end

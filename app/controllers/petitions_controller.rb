@@ -37,38 +37,38 @@ class PetitionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /petities/1
-  # PATCH/PUT /petities/1.json
+  # PATCH/PUT /petitions/1
+  # PATCH/PUT /petitions/1.json
   def update
     respond_to do |format|
-      if @petity.update(petity_params)
-        format.html { redirect_to @petity, notice: 'Petitie was successfully updated.' }
+      if @petition.update(petition_params)
+        format.html { redirect_to @petition, notice: 'Petition was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @petity.errors, status: :unprocessable_entity }
+        format.json { render json: @petition.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /petities/1
-  # DELETE /petities/1.json
+  # DELETE /petitions/1
+  # DELETE /petitions/1.json
   def destroy
-    @petity.destroy
+    @petition.destroy
     respond_to do |format|
-      format.html { redirect_to petities_url }
+      format.html { redirect_to petitions_url }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_petity
-      @petity = Petitie.find(params[:id])
+    def set_petition
+      @petition = Petition.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def petity_params
-      params.require(:petity).permit(:titlu, :continut, :user_id)
+    def petition_params
+      params.require(:petition).permit(:user_id, :titlu, :continut)
     end
 end

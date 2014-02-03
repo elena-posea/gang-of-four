@@ -12,7 +12,9 @@
       </div>
     <% end %>
 
-    <div class="field">
+  <%= f.hidden_field 'user_id', value: current_user.id %>
+  
+   <div class="field">
       <%= f.label :titlu %><br>
       <%= f.text_field :titlu %>
     </div>
@@ -20,13 +22,8 @@
       <%= f.label :continut %><br>
       <%= f.text_field :continut %>
     </div>
-  <%= f.hidden_field 'user_id', value: current_user.id %>
 
-    <div class="field">
-      <%= f.label :user_id %><br>
-      <%= f.number_field :user_id %>
-    </div>
-    <div class="actions">
+   <div class="actions">
       <%= f.submit "Creează petiția!" %>
     </div>
   <% end %>

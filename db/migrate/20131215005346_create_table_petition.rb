@@ -3,7 +3,7 @@ class CreateTablePetition < ActiveRecord::Migration
 		create_table :petition do |t|
 			t.string :titlu
 			t.string :continut
-			t.text :user_id
+			t.integer :user_id
 		end
 	end
 end

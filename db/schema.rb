@@ -11,20 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131215011856) do
-
-  create_table "petities", force: true do |t|
-    t.string   "titlu"
-    t.string   "continut"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140202223802) do
 
   create_table "petitions", force: true do |t|
-    t.string "titlu"
-    t.string "continut"
-    t.text   "user_id"
+    t.string  "titlu"
+    t.string  "continut"
+    t.integer "user_id"
   end
 
   create_table "taggings", force: true do |t|
@@ -46,7 +38,7 @@ ActiveRecord::Schema.define(version: 20131215011856) do
 
   create_table "user_petitions", force: true do |t|
     t.integer  "user_id"
-    t.integer  "petitie_id"
+    t.integer  "petition_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

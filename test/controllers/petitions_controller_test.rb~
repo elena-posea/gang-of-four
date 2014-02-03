@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class PetitiesControllerTest < ActionController::TestCase
+class PetitionsControllerTest < ActionController::TestCase
   setup do
-    @petity = petities(:one)
+    @petition = petitions(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:petities)
+    assert_not_nil assigns(:petitions)
   end
 
   test "should get new" do
@@ -16,12 +16,12 @@ class PetitiesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create petity" do
-    assert_difference('Petitie.count') do
-      post :create, petity: { continut: @petity.continut, titlu: @petity.titlu, user_id: @petity.user_id }
+  test "should create petition" do
+    assert_difference('Petition.count') do
+      post :create, petition: { continut: @petition.continut, titlu: @petition.titlu, user_id: @petition.user_id }
     end
 
-    assert_redirected_to petity_path(assigns(:petity))
+    assert_redirected_to petition_path(assigns(:petition))
   end
 
   test "should show petity" do
