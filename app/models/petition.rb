@@ -1,6 +1,6 @@
 class Petition < ActiveRecord::Base
-  #acts_as_taggable
-  #acts_as_taggable_on :titlu, :continut
+  # attr_accessible :titlu, :continut, :tag_list
+  acts_as_taggable_on :tag_list  
   belongs_to :user
 end
 

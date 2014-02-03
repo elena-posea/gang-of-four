@@ -8,7 +8,8 @@ gem 'devise'
 # Bootstrap-sass for stylesheets
 gem 'bootstrap-sass'
 # gem pentru tagare
-#gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on'
+gem 'protected_attributes'
 
 # pentru drop-down-ul de tari
 gem 'country_select'

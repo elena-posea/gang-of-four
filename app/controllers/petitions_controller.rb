@@ -69,6 +69,14 @@ class PetitionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def petition_params
-      params.require(:petition).permit(:user_id, :titlu, :continut)
+      params.require(:petition).permit(:user_id, :titlu, :continut, :tag_list)
     end
+
+    def tagged
+      if params[:tag].present? 
+        @petitions = Petition.tagged_with(params[:tag])
+      else 
+        @petitions = Petition.postall
+      end  
+end
 end
