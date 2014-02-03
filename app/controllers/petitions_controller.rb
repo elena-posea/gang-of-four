@@ -4,7 +4,7 @@ class PetitionsController < ApplicationController
   # GET /petitions
   # GET /petitions.json
   def index
-    @petitions = Petition.all
+     @petitions = Petition.all
   end
 
   # GET /petitions/1
@@ -74,10 +74,11 @@ class PetitionsController < ApplicationController
     end
 
     def tagged
-      if params[:tag].present? 
+      if params[:tag] 
         @petitions = Petition.tagged_with(params[:tag])
       else 
-        @petitions = Petition.postall
+        @petitions = Petition.all
       end  
-     end
+    end
+
 end

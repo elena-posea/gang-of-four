@@ -5,11 +5,12 @@
     <tr>
       <th>Titlu</th>
       <th>Continut</th>
+      <th>Tag-uri</th>
       <th>User</th>
       <th></th>
       <th></th>
-      <th></th>
-    </tr>
+      <th></th>  
+  </tr>
   </thead>
 
   <tbody>
@@ -17,6 +18,12 @@
       <tr>
         <td><%= petition.titlu %></td>
         <td><%= petition.continut %></td>
+        <td>
+           <% petition.tags.any? %>
+           <% petition.tags.each do |tag| %>
+           <%= link_to tag.name, tagged_url(:tag => tag.name) %>
+           <% end %>
+        </td>
         <td><%= petition.user_id %></td>
         <td><%= link_to 'Show', petition %></td>
         <td><%= link_to 'Edit', edit_petition_path(petition) %></td>

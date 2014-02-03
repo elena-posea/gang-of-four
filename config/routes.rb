@@ -9,7 +9,8 @@ GangOfFour::Application.routes.draw do
   match 'about', to: 'static_pages#about', via: :get
 
   match 'tagged' => 'petitions#tagged', :as => 'tagged', via: :get  
- # The priority is based upon order of creation: first created -> highest priority.
+ 
+  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
