@@ -1,6 +1,9 @@
 GangOfFour::Application.routes.draw do
   
-  resources :petitions
+  get 'tags/:tag', to: 'petitions#index', as: :tag
+  #match 'tagged' => 'petitions#tagged', :as => 'tagged', via: :get  
+
+   resources :petitions
 
   devise_for :users
  
@@ -8,8 +11,7 @@ GangOfFour::Application.routes.draw do
   match 'home', to: 'static_pages#home', via: :get
   match 'about', to: 'static_pages#about', via: :get
 
-  match 'tagged' => 'petitions#tagged', :as => 'tagged', via: :get  
- 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

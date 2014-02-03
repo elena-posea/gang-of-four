@@ -21,7 +21,7 @@
         <td>
            <% petition.tags.any? %>
            <% petition.tags.each do |tag| %>
-           <%= link_to tag.name, tagged_url(:tag => tag.name) %>
+           <%= link_to tag.name, tag_path(tag.name) %>
            <% end %>
         </td>
         <td><%= petition.user_id %></td>

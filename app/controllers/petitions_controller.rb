@@ -4,7 +4,11 @@ class PetitionsController < ApplicationController
   # GET /petitions
   # GET /petitions.json
   def index
-     @petitions = Petition.all
+      if params[:tag] 
+        @petitions = Petition.tagged_with(params[:tag])
+      else 
+        @petitions = Petition.all
+      end  
   end
 
   # GET /petitions/1
