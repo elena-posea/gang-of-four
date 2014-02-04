@@ -1,2 +1,53 @@
 <h1>StaticPages#home</h1>
 <p>Find me in app/views/static_pages/home.html.erb</p>
+
+<script type="text/javascript" charset="utf-8">
+   $(function(){
+   	new Highcharts.Chart({
+   		chart: {
+   			renderTo: "statistics"
+   		},
+
+   		title: {
+   			text: "Statistici"
+   		},
+
+        xAxis: {
+        	title: {
+        		enabled: true,
+        		text: "Orele zilei curente"
+        	}
+        	type: "datetime",
+
+        	DateTimeLabelFormats: {
+                 hour: '%I %p',
+                 minute: '%I: %M %p'
+        	}
+        },
+
+        yAxis: {
+        	title: {
+        		text: "Numar"
+        	} 
+        },
+
+        DateTimeLabelFormats: {
+            hour: '%H:%M' 
+        },
+
+        tooltip: {
+        	formatter: function(){
+        		return Highcharts.dateFormat('%H:%M', this.y);
+        	}
+        },
+
+        series: [{
+        	pointInterval: <%= 1.day * 1000%>, 
+        	pointStart: <%= %>
+        	data: <%= (Date.today).map{ |date| }.inspect%>
+        }]  
+   	});
+   });
+</script>
+
+<div id="statistics" style="width: 560; height: 300;"></div>
