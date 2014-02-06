@@ -11,12 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203080434) do
+ActiveRecord::Schema.define(version: 20140206162552) do
 
   create_table "petitions", force: true do |t|
     t.string  "titlu"
     t.string  "continut"
     t.integer "user_id"
+  end
+
+  create_table "sign_petition", force: true do |t|
+    t.string   "email"
+    t.integer  "petition_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sign_petitions", force: true do |t|
+    t.string   "email"
+    t.integer  "ptition_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "taggings", force: true do |t|

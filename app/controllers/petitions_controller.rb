@@ -1,5 +1,5 @@
 class PetitionsController < ApplicationController
-  before_action :set_petition, only: [:show, :edit, :update, :destroy]
+  before_action :set_petition, only: [:show, :edit, :update, :destroy, :sign]
 
   # GET /petitions
   # GET /petitions.json
@@ -23,6 +23,11 @@ class PetitionsController < ApplicationController
 
   # GET /petitions/1/edit
   def edit
+  end
+
+  # GET /petitions/1/sign
+  def sign
+    @sign = SignPetition.new
   end
 
   # POST /petitions

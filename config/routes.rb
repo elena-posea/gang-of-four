@@ -2,6 +2,7 @@ GangOfFour::Application.routes.draw do
   
   get 'tags/:tag', to: 'petitions#index', as: :tag
   #match 'tagged' => 'petitions#tagged', :as => 'tagged', via: :get  
+  get '/petitions/:id/sign', to: 'petitions#sign', as: 'sign'
 
    resources :petitions
 

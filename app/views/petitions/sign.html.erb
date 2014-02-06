@@ -1,0 +1,31 @@
+<h1>Signing petition</h1>
+
+  <%= form_for(@sign) do |f| %>
+    <% if @petition.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@petition.errors.count, "error") %> prohibited this petition from being saved:</h2>
+
+        <ul>
+        <% @petition.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <% if user_signed_in? %>
+     <%= f.hidden_field 'email', value: current_user.email %>
+  <%else%>
+        <div><%= f.label :email %><br />
+        <%= f.email_field :email %></div>
+  <%end%>
+  
+  <%= f.hidden_field 'petition_id', value: @petition.petition_id %>
+  
+   <div class="actions">
+      <%= f.submit "Semnează petiția!" %>
+    </div>
+  <% end %>
+
+<%= link_to 'Show', @petition %> |
+<%= link_to 'Back', petitions_path %>
